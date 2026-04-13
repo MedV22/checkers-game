@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Web Checkers</title>
+    <meta name="description" content="A classic checkers game built with vanilla HTML, CSS, and JS.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-wrapper">
+        <header class="game-header">
+            <h1>Checkers</h1>
+            <div class="game-info">
+                <div class="player-info player-red active-turn" id="player-red-info">
+                    <div class="color-swatch red-swatch"></div>
+                    <span>Red</span>
+                    <span class="piece-count" id="red-count">12</span>
+                </div>
+                <div class="turn-indicator">
+                    <span id="turn-text" class="turn-text-red">Red's Turn</span>
+                </div>
+                <div class="player-info player-black" id="player-black-info">
+                    <div class="color-swatch black-swatch"></div>
+                    <span>Black</span>
+                    <span class="piece-count" id="black-count">12</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="board-container">
+            <div id="board" class="board"></div>
+        </main>
+        
+        <div class="controls">
+            <button id="restart-btn" class="btn primary-btn">Restart Game</button>
+        </div>
+    </div>
+
+    <!-- Game Over Modal -->
+    <div id="game-over-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2 id="winner-text">Red Wins!</h2>
+            <p id="winner-subtext">All black pieces captured.</p>
+            <button id="modal-restart-btn" class="btn primary-btn">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
